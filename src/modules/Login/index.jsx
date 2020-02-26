@@ -17,6 +17,8 @@ class LoginModule extends Component {
                 </label>
                 <input className="login__input" type="password" tabIndex="2"/>
                 <input className="login__button" type="submit" tabIndex="3" value="Log in"/>
+                <p className="login__text">New to ShadowChat?</p>
+                <a href="#" className="login__link">Create an account</a>
             </form>
         );
     }
