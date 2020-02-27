@@ -38,10 +38,11 @@ class RegisterModule extends Component {
                         <input className="form__input" type="password" tabIndex="6"/>
                     </div>
                 </div>
-                <input className="form__button" type="submit" tabIndex="7" value="Sign up"/>
-                <span className="form__text"> or </span>
-                <input className="form__button button_google" type="submit" tabIndex="8"
-                       value="Sign up with Google"/>
+                <div className="form__footer">
+                    <input className="form__button" type="submit" tabIndex="7" value="Sign up"/>
+                    <input className="form__button button_google" type="submit" tabIndex="8"
+                           value="Sign up with Google"/>
+                </div>
             </form>
         );
     }
