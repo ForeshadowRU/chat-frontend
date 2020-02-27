@@ -16,20 +16,25 @@ class RegisterModule extends Component {
                         <label className="form__item">
                             E-mail
                             <input className="form__input" type="email" tabIndex="2" required/></label>
+                        <p className="form__warn">something is wrong</p>
                         <label className="form__item">
                             Password
                             <input className="form__input" type="password" tabIndex="3" required/></label>
+                        <p className="form__warn">something is wrong</p>
                     </div>
                     <div className="form__block">
                         <label className="form__item">
                             Username
                             <input className="form__input" type="text" tabIndex="4" required/></label>
+                        <p className="form__warn">something is wrong</p>
                         <label className="form__item">
                             Firstname
                             <input className="form__input" type="text" tabIndex="5" required/></label>
+                        <p className="form__warn">something is wrong</p>
                         <label className="form__item">
                             Lastname
                             <input className="form__input" type="text" tabIndex="6" required/></label>
+                        <p className="form__warn">something is wrong</p>
                     </div>
                 </div>
                 <div className="form__footer">
