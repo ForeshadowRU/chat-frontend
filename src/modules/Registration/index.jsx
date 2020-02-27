@@ -12,37 +12,33 @@ class RegisterModule extends Component {
                 <div className="form-container">
                     <div className="form__block">
                         <label className="form__item">
-                            Avatar</label>
-                        <button className="form__input_photo" tabIndex="1"/>
+                            Avatar
+                            <button className="form__input_photo" tabIndex="1"/></label>
                         <label className="form__item">
-                            Firstname
-                        </label>
-                        <input className="form__input" type="firstname" tabIndex="2"/>
+                            E-mail
+                            <input className="form__input" type="email" tabIndex="2" required/></label>
                         <label className="form__item">
-                            Lastname
-                        </label>
-                        <input className="form__input" type="lastname" tabIndex="3"/>
+                            Password
+                            <input className="form__input" type="password" tabIndex="3" required/></label>
                     </div>
                     <div className="form__block">
                         <label className="form__item">
                             Username
-                        </label>
-                        <input className="form__input" type="username" tabIndex="4"/>
+                            <input className="form__input" type="text" tabIndex="4" required/></label>
                         <label className="form__item">
-                            E-mail
-                        </label>
-                        <input className="form__input" type="email" tabIndex="5"/>
+                            Firstname
+                            <input className="form__input" type="text" tabIndex="5" required/></label>
                         <label className="form__item">
-                            Password
-                        </label>
-                        <input className="form__input" type="password" tabIndex="6"/>
+                            Lastname
+                            <input className="form__input" type="text" tabIndex="6" required/></label>
                     </div>
                 </div>
                 <div className="form__footer">
-                    <input className="form__button" type="submit" tabIndex="7" value="Sign up"/>
-                    <input className="form__button button_google" type="submit" tabIndex="8"
-                           value="Sign up with Google"/>
+                    <button className="form__button" tabIndex="7">Sign up</button>
+                    <button className="form__button button_google" tabIndex="8">Sign up with Google</button>
+                    <a href="../login" className="form__link">Log in</a>
                 </div>
+
             </form>
         );
     }
