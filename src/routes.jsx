@@ -7,13 +7,14 @@ export default [
     path: "/",
     exact: true,
     component: () => <Redirect to="/login" />
-    // component: () => <Redirect to="/registration" />
   },
   {
     path: "/login",
     component: LoginModule
-    // path: "/registration",
-    // component: RegisterModule
+  },
+  {
+    path: "/registration",
+    component: RegisterModule
   }
 ];
 

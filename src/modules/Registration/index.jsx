@@ -8,11 +8,10 @@ class RegisterModule extends Component {
         return (
             <form className="sign-up form" name="form-container" method="POST">
                 <h1 className="form__title">Create an account</h1>
-                <h2 className="form__subtitle">Please, add your:</h2>
                 <div className="form-container">
                     <div className="form__block">
                         <label className="form__item">
-                            Avatar
+                            Add Avatar
                             <button className="form__input_photo" tabIndex="1"/></label>
                         <label className="form__item">
                             E-mail
