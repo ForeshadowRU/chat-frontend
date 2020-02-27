@@ -24,9 +24,9 @@ class LoginModule extends Component {
           Log in with Google
         </button>
         <p className="form__text">New to ShadowChat?</p>
-        <a href="../registration" className="form__link">
+        <Link to="/register" className="form__link">
           Create an account
-        </a>
+        </Link>
       </form>
     );
   }
