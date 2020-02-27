@@ -12,10 +12,5 @@ export default [
     path: "/login",
     component: LoginModule
   },
-  {
-    path: "/registration",
-    component: RegisterModule
-  }
+  { path: "/register", component: RegisterModule }
 ];
-
-
