@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-import LoginModule from "modules/Login";
-import RegisterModule from "./modules/Registration";
+import LoginModule from "src/modulesIlya/Login";
+import RegisterModule from "./modulesIlya/Registration";
 export default [
   {
     path: "/",
@@ -12,5 +12,8 @@ export default [
     path: "/login",
     component: LoginModule
   },
-  { path: "/register", component: RegisterModule }
+  {
+    path: "/registration",
+    component: RegisterModule
+  }
 ];
