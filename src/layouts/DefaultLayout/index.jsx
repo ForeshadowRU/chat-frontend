@@ -1,6 +1,13 @@
 import React from "react";
+import ServerSidebar from "./ServersBar";
 
 export const DefaultLayout = props => {
   const { children } = props;
-  return <div>{children}</div>;
+  return (
+    <>
+      <div></div>
+      <ServerSidebar />
+      {children}
+    </>
+  );
 };

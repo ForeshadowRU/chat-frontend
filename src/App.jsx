@@ -19,17 +19,19 @@ class App extends React.Component {
   };
   getPrivateRoutes = () => {
     return (
-      <Switch>
-        {privateRoutes.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={props => <route.component {...props} />}
-          />
-        ))}
-        <Redirect to="/" />
-      </Switch>
+      <DefaultLayout>
+        <Switch>
+          {privateRoutes.map((route, index) => (
+            <Route
+              key={index}
+              path={route.path}
+              exact={route.exact}
+              component={props => <route.component {...props} />}
+            />
+          ))}
+          <Redirect to="/" />
+        </Switch>
+      </DefaultLayout>
     );
   };
 

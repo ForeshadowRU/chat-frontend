@@ -12,7 +12,7 @@ axiosInstance.interceptors.request.use(
   config => {
     config.headers.Authorization = "";
 
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("auth_token");
 
     if (token) {
       config.headers.Authorization = token;

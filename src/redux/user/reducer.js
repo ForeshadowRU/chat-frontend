@@ -1,7 +1,7 @@
 import { LOGIN } from "./actionTypes";
 
 const initialState = {
-  token: null,
+  token: localStorage.getItem("auth_token"),
   user: null
 };
 

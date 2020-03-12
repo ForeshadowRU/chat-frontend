@@ -10,6 +10,7 @@ export const login = values => async (dispatch, getStore) => {
   try {
     const response = await axios.post("auth/login", values);
     const { data } = response;
+    localStorage.setItem("auth_token", data.auth_token);
     dispatch(
       setLoginData({
         ...data,
