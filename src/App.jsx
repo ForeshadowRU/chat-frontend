@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import publicRoutes from "routes/public";
 import { DefaultLayout } from "layouts/DefaultLayout";
 import privateRoutes from "routes/private";
@@ -18,21 +18,25 @@ class App extends React.Component {
     ));
   };
   getPrivateRoutes = () => {
-    return privateRoutes.map((route, index) => (
-      <Route
-        key={index}
-        path={route.path}
-        exact={route.exact}
-        component={props => <route.component {...props} />}
-      />
-    ));
+    return (
+      <Switch>
+        {privateRoutes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={props => <route.component {...props} />}
+          />
+        ))}
+        <Redirect to="/" />
+      </Switch>
+    );
   };
 
   render() {
     const { user } = this.props;
     if (user.token) {
-      alert(this.getPrivateRoutes());
-      return <Switch>{this.getPrivateRoutes()}</Switch>;
+      return this.getPrivateRoutes();
     }
     return <Switch>{this.getPublicRoutes()}</Switch>;
   }

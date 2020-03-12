@@ -4,7 +4,7 @@ import "./registration.sass";
 import { connect } from "react-redux";
 
 import { Formik } from "formik";
-import RegisterForm from "components/RegisterForm";
+import RegisterForm from "components/Register";
 import { register } from "redux/user/actions";
 
 class RegisterModule extends Component {
