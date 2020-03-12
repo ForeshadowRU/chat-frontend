@@ -10,7 +10,7 @@ class LoginModule extends Component {
   render() {
     return (
       <Formik
-        initialValues={{ login: "", password: "" }}
+        initialValues={{ username: "", password: "" }}
         onSubmit={(values, actions) => {
           const { login } = this.props;
           login(values);

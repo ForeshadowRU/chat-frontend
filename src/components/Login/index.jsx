@@ -18,8 +18,8 @@ class LoginForm extends Component {
             type="email"
             tabIndex="1"
             onChange={handleChange}
-            name="login"
-            value={values.login}
+            name="username"
+            value={values.username}
           />
         </label>
         <label className="form__item">
