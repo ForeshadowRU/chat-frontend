@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 class LoginModule extends Component {
   render() {
     return (
-      <form className="login form" name="form-container" method="POST">
+      <form className="login form" name="form-container">
         <h1 className="form__title">Welcome back!</h1>
         <h2 className="form__subtitle">We are glad to see you again</h2>
         <label className="form__item">
