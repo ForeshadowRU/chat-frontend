@@ -4,7 +4,7 @@ axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 axios.defaults.headers.common["X-Cache-Control"] = "no-cache";
 
 const axiosInstance = axios.create({
-  baseURL: "http://95.189.145.106:35565"
+  baseURL: process.env.REACT_APP_BACKEND_URL
 });
 
 axiosInstance.interceptors.request.use(
