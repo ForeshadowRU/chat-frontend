@@ -1,0 +1,27 @@
+
+.user-preview
+    display: flex
+    flex-direction: row
+    width: 100%
+    margin-top: 10px
+    margin-bottom: 15px
+    height: 50px
+    &:active        
+        background-color: #472f50
+    &-active
+        @extend .user-preview
+        background-color: #31407c
+    &__image
+        width: 50px
+        height: 100%
+        border-radius: 50%
+        object-fit: cover
+        margin: 5px
+    &__info
+        display: flex
+        flex-direction: column
+    &__name
+        font-size: 18px
+    &__username
+        font-size: 12px
+        color: #7271c2

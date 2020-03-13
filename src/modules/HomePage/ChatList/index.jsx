@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Search from "./Search";
+import { getMockedData } from "./chatlist.mock";
+import UserPreview from "ui/UserPreview";
 
 class ChatList extends Component {
   render() {
@@ -9,7 +11,11 @@ class ChatList extends Component {
 
         <ul className="homepage__chatlist__separator">
           <span>Private messages</span>
-          <li className="homepage__chatlist__item"></li>
+          {getMockedData().map((user, index) => (
+            <li className="homepage__chatlist__item">
+              <UserPreview {...user} active={index === 0} />
+            </li>
+          ))}
         </ul>
       </div>
     );

@@ -5,7 +5,7 @@ import { DefaultLayout } from "layouts/DefaultLayout";
 import privateRoutes from "routes/private";
 import { connect } from "react-redux";
 import PageNotFound from "routes/services/404";
-
+import "./index.sass";
 class App extends React.Component {
   getPublicRoutes = () => {
     return publicRoutes.map((route, index) => (
