@@ -5,9 +5,8 @@ export const DefaultLayout = props => {
   const { children } = props;
   return (
     <>
-      <div></div>
       <ServerSidebar />
-      {children}
+      <div className="layout-container">{children}</div>
     </>
   );
 };
