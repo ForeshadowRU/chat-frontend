@@ -7,7 +7,6 @@ class HomePage extends Component {
     return (
       <div className="homepage">
         <ChatList />
-
         <div key="message-container" className="homepage__message-container">
           12312312
         </div>

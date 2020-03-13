@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/form.sass";
+import "styles/form.sass";
 import "./login.sass";
 import { Formik } from "formik";
 import LoginForm from "components/Login";

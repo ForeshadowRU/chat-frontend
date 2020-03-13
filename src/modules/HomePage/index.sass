@@ -1,15 +1,29 @@
-$backgroundColor: #626366;
+$backgroundColor: #484e61;
+@import "styles/form.sass"
+@import "styles/common.sass"
 .homepage
     &__chatlist
         background-color: $backgroundColor
-        width: 400px
+        max-width: 250px
+        min-width: 200px
         height: 100vh
+        &__search
+            display: flex
+            flex-direction: column   
+            margin-left: 10px
+            &__input
+                @extend .form__input
+                width: 90%
+        &__separator
+            width: 100%  
+            margin: 10px                                              
     &__layout
         display: flex
         flex-direction: row
     &__message-container
         height: 100vh
         background-color: #31407c
+    
         
 
         

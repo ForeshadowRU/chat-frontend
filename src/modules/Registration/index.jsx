@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/form.sass";
+import "styles/form.sass";
 import "./registration.sass";
 import { connect } from "react-redux";
 
