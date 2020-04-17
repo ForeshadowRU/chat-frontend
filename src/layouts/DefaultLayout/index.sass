@@ -1,0 +1,26 @@
+@import ../../styles/variables
+.navbar
+    height: $--nav-size
+    background-color: $--bg
+    padding: 0 1rem
+    border-bottom: $--border-radius
+    &-nav
+        max-width: 100%
+        height: 100%
+        display: flex
+        justify-content: flex-end
+    &-item
+        height: calc( $--navsize * 0.8 )
+        display: flex
+        align-items: center
+        justify-content: center
+    &-icon
+        $btn-size: calc($--nav-size *0.5)
+        width: $btn-size
+        height: $btn-size
+        border-radius: 50%
+        padding: 5px
+        margin: 2px
+        display: flex
+        align-items: center
+        justify-content: center

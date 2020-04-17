@@ -5,12 +5,7 @@ import MessageContainer from "./MessageContainer";
 
 class HomePage extends Component {
   render() {
-    return (
-      <div className="homepage">
-        <ChatList />
-        <MessageContainer />
-      </div>
-    );
+    return <div className="homepage"></div>;
   }
 }
 

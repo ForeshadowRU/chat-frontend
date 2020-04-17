@@ -7,20 +7,54 @@ body
 code 
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
 
-
-$--bg: #242526
-$--bg-accent: #484a4d
-$--text-color: #dadce1
-$--nav-size: 60px
-$--border: 1px solid #474a4d
-$--border-radius: 8px
-$--speed: 500ms
-
 ul 
   list-style: none
   margin: 0 
   padding: 0
 
-a
-  color: $--text-color
-  text-decoration: none
+.App 
+	text-align: center 
+body 
+	margin: 0px 
+	background: #1b1515 
+*,
+*::after,
+*::before 
+	box-sizing: border-box 
+
+.chat 
+	overflow: hidden 
+	background: #fcfcfc 
+	border-radius: 10px 
+	height: 80vh 
+	margin-top: 6vh 
+	display: flex 
+	width: 800px 
+	flex-wrap: wrap 
+	margin-left: calc(50% - 400px) 
+.chat__input 
+	padding: 10px 30px 10px 30px 
+	height: 100px 
+	width: calc(100% - 100px) 
+.chat__message 
+	width: 800px 
+.chat__messages 
+	overflow-y: scroll 
+	height: calc(80vh - 100px) 
+	overflow-x: hidden 
+.chat__submit 
+	height: 100px 
+	width: 100px 
+	background: url(./assets/plane.svg) 
+	background-size: 50% 
+	background-repeat: no-repeat 
+	background-position-x: 22px 
+	background-position-y: 22px 
+	opacity: 0.3 
+.chat__controll 
+	border-top: 10px solid #000000 
+	display: flex 
+	flex-wrap: wrap 
+	flex-direction: column-reverse 
+	height: 100px 
+	width: 100% 
