@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function NavItem(props) {
@@ -8,7 +7,7 @@ function NavItem(props) {
 
   return (
     <li className="navbar-item">
-      <div to="#" className="navbar-icon" onClick={() => setOpen(!open)}>
+      <div className="navbar-icon" onClick={() => setOpen(!open)}>
         {icon}
       </div>
       {open && children}
