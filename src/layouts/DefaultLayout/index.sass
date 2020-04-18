@@ -8,19 +8,27 @@
         max-width: 100%
         height: 100%
         display: flex
+        align-items: center;
         justify-content: flex-end
     &-item
-        height: calc( $--navsize * 0.8 )
+        height: calc(#{$--nav-size} * 0.8)
         display: flex
         align-items: center
         justify-content: center
     &-icon
-        $btn-size: calc($--nav-size *0.5)
+        $btn-size: calc(#{$--nav-size}*0.6)
         width: $btn-size
         height: $btn-size
         border-radius: 50%
+        background-color: #484a4d
         padding: 5px
         margin: 2px
         display: flex
         align-items: center
         justify-content: center
+        &:hover
+            filter: brightness(1.2)
+    &-icon svg
+        fill: $--text-color
+        width: 20px;
+        height: 20px;        
