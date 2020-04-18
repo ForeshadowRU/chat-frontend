@@ -35,13 +35,15 @@
 .dropdown
     position: absolute
     top: 58px
-    width: 300px
+    width: 25%
+    min-width: 100px
     transform: translateX(-45%)
     background-color: $--bg
     border: $--border
     padding: 1rem
     border-radius: $--border-radius
     overflow: hidden
+    color: $--text-color
     &-item
         height: 50px
         display: flex
@@ -51,5 +53,8 @@
         padding: 0.5rem
         &:hover
             background-color: #525357
+    &-lefticon
+        @extend .navbar-icon
+        margin-right: auto
     &-righticon
         margin-left: auto

@@ -13,8 +13,8 @@ function NavBar() {
         <NavItem icon={<CogIcon />}></NavItem>
         <NavItem icon={<CaretIcon />}>
           <DropdownMenu>
-            <DropdownItem leftIcon={NotifyIcon}>Notifications</DropdownItem>
-            <DropdownItem leftIcon={CogIcon}>Settings</DropdownItem>
+            <DropdownItem leftIcon={<NotifyIcon />}>Notifications</DropdownItem>
+            <DropdownItem leftIcon={<CogIcon />}>Settings</DropdownItem>
           </DropdownMenu>
         </NavItem>
       </ul>
