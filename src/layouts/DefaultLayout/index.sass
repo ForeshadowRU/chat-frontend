@@ -58,3 +58,30 @@
         margin-right: auto
     &-righticon
         margin-left: auto
+    &-text
+        display: flex
+        flex-direction: column
+        justify-content: center;
+        align-items: center;
+    &-profile
+        @extend .dropdown-item        
+        height: $--nav-size
+        &-image
+            @extend .navbar-icon
+            width: $--nav-size
+            height: $--nav-size
+            display: flex
+            justify-content: center
+            padding: 0
+        &-textarea
+            @extend .dropdown-text
+            margin: 0
+            width: 100%
+            
+        &-fullname
+            width: 100% 
+            display: flex
+            justify-content: center
+            
+
+

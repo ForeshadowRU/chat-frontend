@@ -5,6 +5,7 @@ import { ReactComponent as CaretIcon } from "assets/caret.svg";
 import DropdownMenu from "../DropdownMenu";
 import DropdownItem from "../DropdownMenu/DropdownItem";
 import { SvgFactory } from "assets/SvgFactory";
+import ProfileItem from "../DropdownMenu/ProfileItem";
 function NavBar() {
   return (
     <nav className="navbar">
@@ -13,6 +14,7 @@ function NavBar() {
         <NavItem icon={<CogIcon />}></NavItem>
         <NavItem icon={<CaretIcon />}>
           <DropdownMenu>
+            <ProfileItem />
             <DropdownItem leftIcon={SvgFactory.bell()}>
               Notifications
             </DropdownItem>
