@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function NavItem(props) {
-  const { icon } = props;
+  const { icon, children } = props;
   const [open, setOpen] = useState(false);
 
   return (
     <li className="navbar-item">
-      <Link to="#" className="navbar-icon" onClick={() => setOpen(!open)}>
+      <div to="#" className="navbar-icon" onClick={() => setOpen(!open)}>
         {icon}
-      </Link>
+      </div>
+      {open && children}
     </li>
   );
 }

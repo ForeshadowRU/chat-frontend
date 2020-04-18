@@ -32,3 +32,24 @@
         fill: $--text-color
         width: 20px;
         height: 20px;        
+.dropdown
+    position: absolute
+    top: 58px
+    width: 300px
+    transform: translateX(-45%)
+    background-color: $--bg
+    border: $--border
+    padding: 1rem
+    border-radius: $--border-radius
+    overflow: hidden
+    &-item
+        height: 50px
+        display: flex
+        align-items: center
+        border-radius: $--border-radius
+        transition: background $--speed
+        padding: 0.5rem
+        &:hover
+            background-color: #525357
+    &-righticon
+        margin-left: auto
