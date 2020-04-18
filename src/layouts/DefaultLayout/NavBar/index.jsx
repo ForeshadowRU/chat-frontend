@@ -2,9 +2,9 @@ import React from "react";
 import NavItem from "./NavItem";
 import { ReactComponent as CogIcon } from "assets/cog.svg";
 import { ReactComponent as CaretIcon } from "assets/caret.svg";
-import { ReactComponent as NotifyIcon } from "assets/plane.svg";
 import DropdownMenu from "../DropdownMenu";
 import DropdownItem from "../DropdownMenu/DropdownItem";
+import { SvgFactory } from "assets/SvgFactory";
 function NavBar() {
   return (
     <nav className="navbar">
@@ -13,8 +13,10 @@ function NavBar() {
         <NavItem icon={<CogIcon />}></NavItem>
         <NavItem icon={<CaretIcon />}>
           <DropdownMenu>
-            <DropdownItem leftIcon={<NotifyIcon />}>Notifications</DropdownItem>
-            <DropdownItem leftIcon={<CogIcon />}>Settings</DropdownItem>
+            <DropdownItem leftIcon={SvgFactory.bell()}>
+              Notifications
+            </DropdownItem>
+            <DropdownItem leftIcon={SvgFactory.cog()}>Settings</DropdownItem>
           </DropdownMenu>
         </NavItem>
       </ul>
