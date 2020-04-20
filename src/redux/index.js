@@ -5,12 +5,13 @@ import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
 
 import user from "./user/reducer";
+import channels from "./channels/reducer";
 
 const logger = createLogger({
-  collapsed: true
+  collapsed: true,
 });
 
 export const store = createStore(
-  combineReducers({ user }),
+  combineReducers({ user, channels }),
   composeWithDevTools(applyMiddleware(thunk, logger))
 );

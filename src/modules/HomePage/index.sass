@@ -1,0 +1,24 @@
+@import ../../styles/variables
+.homepage
+    maring: 0
+    padding: 0
+    height: 100%
+    width: 100%
+    &-channels
+        position: fixed
+        background-color: $--channels-bg
+        height: 100%
+        width: 20%
+        display: flex
+        flex-direction: column
+        &-name
+            text-align: center
+            margin-top: 5px
+            margin-bottom: 5px            
+    &-channel
+        margin-left: 10px
+        justify-content: center
+        padding: 5px
+        cursor: pointer
+        &:hover
+            background-color: $--channels-bg-hover
