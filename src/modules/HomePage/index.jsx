@@ -5,7 +5,15 @@ class HomePage extends Component {
   render() {
     return (
       <div className="homepage">
-        <Channels />
+        <div className="homepage-sidebar">
+          <div>
+            <span className="homepage-channels-name">Channels :</span>
+            <Channels />
+          </div>
+          <div>
+            <span className="homepage-channels-name">Private Messges :</span>
+          </div>
+        </div>
       </div>
     );
   }
