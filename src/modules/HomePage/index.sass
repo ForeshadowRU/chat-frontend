@@ -24,3 +24,13 @@
         cursor: pointer
         &:hover
             background-color: $--channels-bg-hover
+    &-pm
+        @extend .homepage-channel
+        
+
+details
+    transition: min-height 5s linear, max-height 5s linear;
+    will-change: max-height;
+    overflow: hidden;
+summary 
+    cursor: pointer

@@ -6,12 +6,13 @@ import thunk from "redux-thunk";
 
 import user from "./user/reducer";
 import channels from "./channels/reducer";
+import pms from "./pms/reducer";
 
 const logger = createLogger({
   collapsed: true,
 });
 
 export const store = createStore(
-  combineReducers({ user, channels }),
+  combineReducers({ user, channels, pms }),
   composeWithDevTools(applyMiddleware(thunk, logger))
 );

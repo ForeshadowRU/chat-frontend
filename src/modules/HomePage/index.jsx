@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import Channels from "./Channels";
 import "./index.sass";
+import PrivateMessages from "./PrivateMessages";
 class HomePage extends Component {
   render() {
     return (
       <div className="homepage">
         <div className="homepage-sidebar">
           <div>
-            <span className="homepage-channels-name">Channels :</span>
             <Channels />
           </div>
           <div>
-            <span className="homepage-channels-name">Private Messges :</span>
+            <PrivateMessages />
           </div>
         </div>
       </div>
