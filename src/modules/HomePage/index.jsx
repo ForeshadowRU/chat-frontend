@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Channels from "./Channels";
+import Channels from "./Sidebar/Channels";
 import "./index.sass";
-import PrivateMessages from "./PrivateMessages";
+import PrivateMessages from "./Sidebar/PrivateMessages";
 class HomePage extends Component {
   render() {
     return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import PrivateMessage from "./PrivateMessage";
-import Spoiler from "ui/Spoiler";
+import Spoiler from "modules/HomePage/Sidebar/Channels/node_modules/ui/Spoiler";
 
 function PrivateMessages(props) {
   const { values } = props;
