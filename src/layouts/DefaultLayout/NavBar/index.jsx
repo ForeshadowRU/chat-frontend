@@ -10,13 +10,12 @@ function NavBar() {
   return (
     <nav className="navbar">
       <ul className="navbar-nav">
-        <NavItem icon={<CogIcon />}></NavItem>
-        <NavItem icon={<CogIcon />}></NavItem>
+        <NavItem icon={SvgFactory.bell()}></NavItem>
         <NavItem icon={<CaretIcon />}>
           <DropdownMenu>
             <ProfileItem />
-            <DropdownItem leftIcon={SvgFactory.bell()}>
-              Notifications
+            <DropdownItem leftIcon={SvgFactory.messenger()}>
+              Feedback
             </DropdownItem>
             <DropdownItem leftIcon={SvgFactory.cog()}>Settings</DropdownItem>
           </DropdownMenu>
