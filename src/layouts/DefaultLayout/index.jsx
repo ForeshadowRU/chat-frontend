@@ -5,7 +5,8 @@ export const DefaultLayout = (props) => {
   const { children } = props;
   return (
     <>
-      <NavBar>{children}</NavBar>
+      <NavBar></NavBar>
+      {children}
     </>
   );
 };
