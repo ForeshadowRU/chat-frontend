@@ -4,6 +4,22 @@
     background-color: $--bg
     padding: 0 1rem
     border-bottom: $--border-radius
+    &-profile
+        padding: 1rem
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        &-image
+            height: 100%
+            width: $--nav-size
+            img
+                width: (calc(#{$--nav-size} * 0.6))
+                height: (calc(#{$--nav-size} * 0.6))
+                border-radius: 50%
+                padding: 10px
+              
+
     &-name
         font-size: 22px
         position: absolute
