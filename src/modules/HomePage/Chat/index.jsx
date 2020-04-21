@@ -1,11 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
+import Messages from "./Messages";
+
 
 function Chat(props) {
   const { active: activeChannel } = props;
   return (
     <section className="homepage-chat">
-      <span className="homepage-chat-channelname">{activeChannel.name}</span>
+        <Messages name={activeChannel.name} />
     </section>
   );
 }
