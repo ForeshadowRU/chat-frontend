@@ -4,6 +4,20 @@
     padding: 0
     height: 100%
     width: 100%
+    &-chat
+        height: calc(100vh - #{$--nav-size})
+        width: 80%;
+        position: absolute
+        left: 20%       
+        top: $--nav-size
+        background: #a37777;
+        &-channelname           
+            color: #000000;
+            margin-left: 50px
+            &::before
+                content: "# "
+        &-messages
+
     &-sidebar
         position: fixed
         background-color: $--channels-bg

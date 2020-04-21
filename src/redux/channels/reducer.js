@@ -6,6 +6,7 @@ const values = Array.apply(null, new Array(10)).map((channel, id) => ({
 }));
 const initialState = {
   values: values,
+  active: values[Math.floor(Math.random() * values.length)],
 };
 
 const ChannelsHandler = {};
