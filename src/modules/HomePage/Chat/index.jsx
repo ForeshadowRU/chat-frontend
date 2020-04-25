@@ -1,13 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
 import Messages from "./Messages";
+import Quill from "./Quill";
 
 function Chat(props) {
   const { active, messages } = props;
   return (
-    <section className="homepage-chat">
-      <Messages name={active.name} messages={messages} />
-    </section>
+    <>
+      <section className="homepage-chat">
+        <Messages name={active.name} messages={messages} />
+      </section>
+      <section className="homepage-quill">
+        <Quill />
+      </section>
+    </>
   );
 }
 

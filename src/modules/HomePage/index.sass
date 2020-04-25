@@ -4,8 +4,17 @@
     padding: 0
     height: 100%
     width: 100%
+    &-quill
+            position: absolute
+            width: 83%
+            left: 17%
+            bottom: 0
+            height: $--quill-height
+            background: $--bg
     &-chat
-        height: calc(100vh - #{$--nav-size})
+        height: calc(100vh - #{$--nav-size} - #{$--quill-height})
+        overflow: hidden
+        overflow-y: scroll        
         width: 83%
         position: absolute
         left: 17%
