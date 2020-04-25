@@ -7,7 +7,7 @@ function Channel(props) {
       className="homepage-channel"
       onClick={() => console.log(`channel ${id} selected`)}
     >
-      <span className="homepage-channel-name">#{name}</span>
+      #{name}
     </li>
   );
 }
