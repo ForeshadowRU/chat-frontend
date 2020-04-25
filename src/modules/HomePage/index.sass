@@ -1,4 +1,16 @@
 @import ../../styles/variables
+
+.ql-container.ql-snow
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
+.ql-toolbar.ql-snow 
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
+.ql-editor p
+    color: #000000
+.ql-container.ql-snow
+    height: 130px
+
 .homepage
     margin: 0
     padding: 0
@@ -6,11 +18,15 @@
     width: 100%
     &-quill
             position: absolute
-            width: 83%
+            width: 80%
             left: 17%
             bottom: 0
             height: $--quill-height
-            background: $--bg
+            background: $--quill-bg
+            padding: 20px
+            &-container       
+                
+            
     &-chat
         height: calc(100vh - #{$--nav-size} - #{$--quill-height})
         overflow: hidden
