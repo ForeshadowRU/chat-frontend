@@ -12,7 +12,7 @@ function NavBar() {
     <nav className="navbar">
       <ul className="navbar-nav">
         <Link className="navbar-name" to="/">
-          SC
+          {SvgFactory.logo()}
         </Link>
         <NavbarProfileItem />
         <NavItem icon={SvgFactory.bell()}></NavItem>
