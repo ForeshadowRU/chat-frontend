@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { SvgFactory } from "assets/SvgFactory";
 
 function Message(props) {
-  const { own, sender } = props;
+  const { own, sender, text } = props;
   const { image, firstname } = sender;
   return (
     <div className="homepage-chat-message-container">
@@ -21,16 +21,7 @@ function Message(props) {
       </div>
       <div className="homepage-chat-message-wrapper">
         <span className="homepage-chat-message-icon">{SvgFactory.edit()}</span>
-        <p className="homepage-chat-message-text">
-          Hello, Dora Dora! How are u? I'm fine. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed Hello, Dora Dora! How are u? I'm
-          fine. Lorem ipsum dolor sit amet, consectetur adipiscing elit, Hello,
-          Dora Dora! How are u? I'm fine. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, Hello, Dora Dora! How are u? I'm fine.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, Hello, Dora
-          Dora! How are u? I'm fine. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit,
-        </p>
+        <p className="homepage-chat-message-text">{text}</p>
         <span className="homepage-chat-message-date">21.04.2020</span>
       </div>
       <div className="homepage-chat-message-profile">

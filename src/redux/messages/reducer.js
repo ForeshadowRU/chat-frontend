@@ -9,7 +9,7 @@ const persons = Array.apply(null, new Array(10)).map((person, id) => ({
 
 const values = Array.apply(null, new Array(10)).map((channel, id) => {
   const sender = persons[Math.floor(Math.random() * persons.length)];
-  return { id, sender, own: sender.id === 0, text: faker.random.words };
+  return { id, sender, own: sender.id === 0, text: faker.lorem.text() };
 });
 const initialState = {
   values: values,
