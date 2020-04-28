@@ -7,21 +7,23 @@ import { login } from "redux/user/actions";
 import { connect } from "react-redux";
 
 class LoginModule extends Component {
+  componentDidMount() {
+    const { match } = this.props;
+    console.log(match);
+  }
+
   render() {
     return (
       <Formik
         initialValues={{ username: "", password: "" }}
-        onSubmit={(values, actions) => {
-          const { login } = this.props;
-          login(values);
-        }}
+        onSubmit={() => undefined}
       >
-        {props => <LoginForm {...props} />}
+        {(props) => <LoginForm {...props} {...this.props} />}
       </Formik>
     );
   }
 }
 
 export default connect(null, {
-  login
+  login,
 })(LoginModule);

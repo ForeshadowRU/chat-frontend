@@ -4,8 +4,23 @@ import { DefaultLayout } from "layouts/DefaultLayout";
 import privateRoutes from "routes/private";
 import { connect } from "react-redux";
 import "./index.sass";
+import _public from "routes/public";
 class App extends React.Component {
   render() {
+    const { token } = this.props;
+    if (!token)
+      return (
+        <Switch>
+          {_public.map((route, index) => (
+            <Route
+              key={index}
+              path={route.path}
+              exact={route.exact}
+              component={(props) => <route.component {...props} />}
+            />
+          ))}
+        </Switch>
+      );
     return (
       <DefaultLayout>
         <Switch>
@@ -22,4 +37,9 @@ class App extends React.Component {
     );
   }
 }
-export default connect((state) => ({}), {})(App);
+export default connect(
+  (state) => ({
+    token: state.user.token,
+  }),
+  {}
+)(App);

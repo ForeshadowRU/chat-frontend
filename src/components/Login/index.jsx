@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 class LoginForm extends Component {
   render() {
-    const { handleChange, values, handleSubmit } = this.props;
+    const { handleSubmit } = this.props;
     return (
       <form
         className="login form"
         name="form-container"
         onSubmit={handleSubmit}
       >
-        <h1 className="form__title">Welcome back!</h1>
+        {/* <h1 className="form__title">Welcome back!</h1>
         <h2 className="form__subtitle">We are glad to see you again</h2>
         <label className="form__item">
           E-mail
@@ -35,10 +36,19 @@ class LoginForm extends Component {
         </label>
         <button className="form__button" tabIndex="3">
           Log in
-        </button>
-        <button className="form__button button_google" tabIndex="4">
+        </button> */}
+
+        <button
+          className="form__button button_google"
+          tabIndex="4"
+          type="button"
+          onClick={() =>
+            window.open(`${process.env.REACT_APP_BACKEND_URL}/auth/google`)
+          }
+        >
           Log in with Google
         </button>
+
         <p className="form__text">New to ShadowChat?</p>
         <Link to="/register" className="form__link">
           Create an account

@@ -1,39 +1,22 @@
 import axios from "helpers/axios";
 import { LOGIN } from "./actionTypes";
 
-const setLoginData = payload => ({
+const setLoginData = (payload) => ({
   type: LOGIN,
-  payload
+  payload,
 });
 
-export const login = values => async (dispatch, getStore) => {
+export const login = (googleToken) => async (dispatch, getStore) => {
   try {
-    const response = await axios.post("auth/login", values);
+    const response = await axios.post("auth/login", {
+      token: `Bearer ${googleToken}`,
+    });
     const { data } = response;
     localStorage.setItem("auth_token", data.auth_token);
     dispatch(
       setLoginData({
         ...data,
-        token: data.auth_token
-      })
-    );
-  } catch (e) {
-    console.log(e.message);
-  }
-};
-
-export const register = values => async (dispatch, getStore) => {
-  try {
-    const response = await axios.post("auth/register", {
-      ...values,
-      isGoogleAccount: false
-    });
-    const { data } = response;
-
-    dispatch(
-      setLoginData({
-        ...data,
-        token: data.auth_token
+        token: data.auth_token,
       })
     );
   } catch (e) {
