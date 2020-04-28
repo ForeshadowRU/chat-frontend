@@ -1,10 +1,11 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { DefaultLayout } from "layouts/DefaultLayout";
 import privateRoutes from "routes/private";
 import { connect } from "react-redux";
 import "./index.sass";
 import _public from "routes/public";
+import { initSocket } from "webscokets";
 class App extends React.Component {
   render() {
     const { token } = this.props;
@@ -19,8 +20,10 @@ class App extends React.Component {
               component={(props) => <route.component {...props} />}
             />
           ))}
+          <Redirect to="/"></Redirect>
         </Switch>
       );
+    initSocket(token);
     return (
       <DefaultLayout>
         <Switch>
@@ -32,6 +35,7 @@ class App extends React.Component {
               component={(props) => <route.component {...props} />}
             />
           ))}
+          <Redirect to="/"></Redirect>
         </Switch>
       </DefaultLayout>
     );

@@ -7,7 +7,16 @@ import ProfileItem from "../DropdownMenu/ProfileItem";
 import NavbarProfileItem from "./ProfileItem";
 import { Link } from "react-router-dom";
 import LogoutItem from "../DropdownMenu/LogoutItem";
-function NavBar() {
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import { me } from "redux/user/actions";
+function NavBar({ user, me }) {
+  useEffect(() => {
+    console.log(user);
+    if (!user.data) {
+      me();
+    }
+  });
   return (
     <nav className="navbar">
       <ul className="navbar-nav">
@@ -18,7 +27,7 @@ function NavBar() {
         <NavItem icon={SvgFactory.bell()}></NavItem>
         <NavItem icon={SvgFactory.caret()}>
           <DropdownMenu>
-            <ProfileItem />
+            <ProfileItem {...user.data} />
 
             <DropdownItem leftIcon={SvgFactory.cog()}>Settings</DropdownItem>
             <LogoutItem>Log Out</LogoutItem>
@@ -29,4 +38,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default connect((state) => ({ user: state.user }), { me: me })(NavBar);

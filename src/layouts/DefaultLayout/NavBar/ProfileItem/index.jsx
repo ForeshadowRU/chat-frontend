@@ -2,11 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 
 function NavbarProfileItem(props) {
-  const { image, firstname } = props;
+  const { avatar, firstname } = props;
   return (
     <li className="navbar-profile">
       <div className="navbar-profile-image">
-        <img src={image} alt="avatar" />
+        <img src={avatar} alt="avatar" />
       </div>
       <div className="navbar-profile-fullname">
         <span>{firstname}</span>

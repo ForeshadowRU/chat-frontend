@@ -1,22 +1,17 @@
-import { LOGIN } from "./actionTypes";
-import faker from "faker";
+import { LOGIN, LOGOUT } from "./actionTypes";
 
-const firstname = faker.name.firstName();
-const lastname = faker.name.lastName();
 const initialState = {
   token: localStorage.getItem("auth_token"),
-  data: {
-    fullname: `${firstname} ${lastname}`,
-    image: faker.image.avatar(),
-    firstname,
-    lastname,
-  },
 };
 
 const UserHandler = {
   [LOGIN]: (state, { payload }) => ({
     ...state,
     ...payload,
+    token: payload.token ? payload.token : state.token,
+  }),
+  [LOGOUT]: (state, { payload }) => ({
+    token: null,
   }),
 };
 

@@ -1,11 +1,18 @@
 import axios from "helpers/axios";
-import { LOGIN } from "./actionTypes";
+import { LOGIN, LOGOUT } from "./actionTypes";
 
 const setLoginData = (payload) => ({
   type: LOGIN,
   payload,
 });
-
+export const me = () => async (dispatch, getStore) => {
+  try {
+    const response = await axios.get("me");
+    dispatch(setLoginData({ data: response.data }));
+  } catch (e) {
+    console.log(e);
+  }
+};
 export const login = (googleToken) => async (dispatch, getStore) => {
   console.log(googleToken);
   try {
@@ -14,8 +21,13 @@ export const login = (googleToken) => async (dispatch, getStore) => {
     });
     const { data } = response;
     localStorage.setItem("auth_token", data.auth_token);
-    dispatch(setLoginData(data));
+    dispatch(setLoginData({ token: data.auth_token, data: data.user }));
   } catch (e) {
     console.log(e.message);
   }
+};
+
+export const logout = () => {
+  localStorage.clear("auth_token");
+  return { type: LOGOUT };
 };

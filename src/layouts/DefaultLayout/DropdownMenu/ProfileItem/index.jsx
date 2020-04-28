@@ -3,16 +3,18 @@ import { connect } from "react-redux";
 
 class ProfileItem extends PureComponent {
   render() {
-    const { image, fullname, status } = this.props;
+    const { avatar, firstname, lastname, status } = this.props;
     return (
       <li className="dropdown-profile">
         <div className="dropdown-profile-image">
-          <img src={image} alt="avatar" />
+          <img src={avatar} alt="avatar" />
         </div>
         <div className="dropdown-profile-textarea">
-          <h3 className="dropdown-profile-fullname">{fullname}</h3>
+          <h3 className="dropdown-profile-fullname">
+            {firstname} {lastname}
+          </h3>
 
-          {status && <span className="dropdown-profile-status">{status}</span>}
+           <span className="dropdown-profile-status">Online</span>
         </div>
       </li>
     );
