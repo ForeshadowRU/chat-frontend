@@ -1,18 +1,21 @@
 import React from "react";
-import { socket } from "webscokets/index";
+import { connect } from "react-redux";
+import { getChannelMessages } from "redux/channels/actions";
 function Channel(props) {
-  const { id, name } = props;
+  const { getChannelMessages, ...rest } = props;
 
   return (
     <li
       className="homepage-channel"
       onClick={() => {
-        console.log(`channel ${id} selected`);
+        getChannelMessages({ id: rest.id, active: rest });
       }}
     >
-      #{name}
+      #{rest.name}
     </li>
   );
 }
 
-export default Channel;
+export default connect(() => {}, {
+  getChannelMessages,
+})(Channel);
