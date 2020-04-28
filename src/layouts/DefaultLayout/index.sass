@@ -21,6 +21,7 @@
                 border-radius: 50%
                 padding: 10px
     &-name
+        color:#dadce1
         font-size: 22px
         position: absolute
         left: 0
@@ -39,6 +40,8 @@
         display: flex
         align-items: center
         justify-content: center
+        color: #dadce1
+
     &-icon
         $btn-size: calc(#{$--nav-size}*0.6)
         width: $btn-size
@@ -58,6 +61,7 @@
         height: 20px
 .dropdown
     position: absolute
+    color: #dadce1
     z-index: 9
     top: 58px
     width: 25%
@@ -70,6 +74,7 @@
     overflow: hidden
     color: $--text-color
     &-item
+        color: #dadce1
         height: 50px
         display: flex
         align-items: center
@@ -93,12 +98,14 @@
     &-righticon
         margin-left: auto
     &-text
+        color: #dadce1
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
     &-profile
-        @extend .dropdown-item        
+        @extend .dropdown-item  
+        color: #dadce1              
         height: $--nav-size
         &-image
             @extend .navbar-icon
@@ -115,8 +122,12 @@
             @extend .dropdown-text
             margin: 0
             width: 100%
+            color: #dadce1
+
             
         &-fullname
+            color: #dadce1
+
             width: 100% 
             display: flex
             justify-content: center

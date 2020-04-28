@@ -1,5 +1,5 @@
 import faker from "faker";
-import { SET_MESSAGES } from "./actionTypes";
+import { SET_MESSAGES, NEW_MESSAGE } from "./actionTypes";
 
 // const persons = Array.apply(null, new Array(10)).map((person, id) => ({
 //   id,
@@ -20,6 +20,14 @@ const MessagesHandler = {
   [SET_MESSAGES]: (state, { payload }) => ({
     values: payload,
   }),
+  [NEW_MESSAGE]: (state, { payload }) => {
+    const values = [...state.values];
+    values.push(payload);
+    return {
+      ...state,
+      values: values,
+    };
+  },
 };
 
 export default (state = initialState, action) =>

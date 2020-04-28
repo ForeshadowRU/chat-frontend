@@ -1,4 +1,3 @@
-import faker from "faker";
 import { SET_CHANNELS, SET_ACTIVE } from "./actionTypes";
 
 const values = [];
