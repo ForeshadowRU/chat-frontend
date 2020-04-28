@@ -7,18 +7,14 @@ const setLoginData = (payload) => ({
 });
 
 export const login = (googleToken) => async (dispatch, getStore) => {
+  console.log(googleToken);
   try {
-    const response = await axios.post("auth/login", {
-      token: `Bearer ${googleToken}`,
+    const response = await axios.get("google", {
+      headers: { Authorization: googleToken },
     });
     const { data } = response;
     localStorage.setItem("auth_token", data.auth_token);
-    dispatch(
-      setLoginData({
-        ...data,
-        token: data.auth_token,
-      })
-    );
+    dispatch(setLoginData(data));
   } catch (e) {
     console.log(e.message);
   }

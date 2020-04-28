@@ -7,11 +7,6 @@ import { login } from "redux/user/actions";
 import { connect } from "react-redux";
 
 class LoginModule extends Component {
-  componentDidMount() {
-    const { match } = this.props;
-    console.log(match);
-  }
-
   render() {
     return (
       <Formik
