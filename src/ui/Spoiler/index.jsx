@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./index.sass";
 function Spoiler(props) {
-  const { title, children, open } = props;
+  const { title, children } = props;
 
   return (
     <details className="spoiler">

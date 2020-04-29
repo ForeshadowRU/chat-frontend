@@ -1,5 +1,6 @@
 @import ../../styles/variables.sass
 .navbar
+    color: $--text-color
     height: $--nav-size
     background-color: $--bg
     position: fixed
@@ -105,7 +106,7 @@
         align-items: center
     &-profile
         @extend .dropdown-item  
-        color: #dadce1              
+        color $--text-color
         height: $--nav-size
         &-image
             @extend .navbar-icon
@@ -122,12 +123,7 @@
             @extend .dropdown-text
             margin: 0
             width: 100%
-            color: #dadce1
-
-            
         &-fullname
-            color: #dadce1
-
             width: 100% 
             display: flex
             justify-content: center

@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { SvgFactory } from "assets/SvgFactory";
-import { createRef } from "react";
 
 function Message(props) {
-  const { own, sender, text } = props;
+  const { sender, text } = props;
   const { avatar, firstname } = sender;
 
   return (

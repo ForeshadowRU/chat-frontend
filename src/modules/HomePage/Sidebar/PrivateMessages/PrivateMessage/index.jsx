@@ -1,7 +1,7 @@
 import React from "react";
 
 function PrivateMessage(props) {
-  const { fullname, id } = props;
+  const { fullname } = props;
   return <li className="homepage-pm">{fullname}</li>;
 }
 

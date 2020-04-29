@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 class ProfileItem extends PureComponent {
   render() {
-    const { avatar, firstname, lastname, status } = this.props;
+    const { avatar, firstname, lastname } = this.props;
     return (
       <li className="dropdown-profile">
         <div className="dropdown-profile-image">
@@ -14,7 +14,7 @@ class ProfileItem extends PureComponent {
             {firstname} {lastname}
           </h3>
 
-           <span className="dropdown-profile-status">Online</span>
+          <span className="dropdown-profile-status">Online</span>
         </div>
       </li>
     );
