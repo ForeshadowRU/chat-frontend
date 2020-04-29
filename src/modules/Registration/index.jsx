@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 
 import { Formik } from "formik";
 import RegisterForm from "components/Register";
-import { register } from "redux/user/actions";
 
 class RegisterModule extends Component {
   submit = (values, options) => {
@@ -22,15 +21,13 @@ class RegisterModule extends Component {
           lastname: "",
           username: "",
           password: "",
-          email: ""
+          email: "",
         }}
       >
-        {props => <RegisterForm {...props} />}
+        {(props) => <RegisterForm {...props} />}
       </Formik>
     );
   }
 }
 
-export default connect(state => ({}), {
-  register: register
-})(RegisterModule);
+export default connect((state) => ({}), {})(RegisterModule);

@@ -1,10 +1,12 @@
 import React from "react";
-
-export const DefaultLayout = props => {
+import NavBar from "./NavBar";
+import "./index.sass";
+export const DefaultLayout = (props) => {
   const { children } = props;
   return (
     <>
-      <div className="layout-container">{children}</div>
+      <NavBar></NavBar>
+      {children}
     </>
   );
 };

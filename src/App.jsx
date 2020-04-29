@@ -1,23 +1,29 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import publicRoutes from "routes/public";
 import { DefaultLayout } from "layouts/DefaultLayout";
 import privateRoutes from "routes/private";
 import { connect } from "react-redux";
-import PageNotFound from "routes/services/404";
 import "./index.sass";
+import _public from "routes/public";
+import { initSocket } from "webscokets";
 class App extends React.Component {
-  getPublicRoutes = () => {
-    return publicRoutes.map((route, index) => (
-      <Route
-        key={index}
-        path={route.path}
-        exact={route.exact}
-        component={props => <route.component {...props} />}
-      />
-    ));
-  };
-  getPrivateRoutes = () => {
+  render() {
+    const { token } = this.props;
+    if (!token)
+      return (
+        <Switch>
+          {_public.map((route, index) => (
+            <Route
+              key={index}
+              path={route.path}
+              exact={route.exact}
+              component={(props) => <route.component {...props} />}
+            />
+          ))}
+          <Redirect to="/"></Redirect>
+        </Switch>
+      );
+    initSocket(token);
     return (
       <DefaultLayout>
         <Switch>
@@ -26,26 +32,18 @@ class App extends React.Component {
               key={index}
               path={route.path}
               exact={route.exact}
-              component={props => <route.component {...props} />}
+              component={(props) => <route.component {...props} />}
             />
           ))}
-          <Redirect to="/" />
+          <Redirect to="/"></Redirect>
         </Switch>
       </DefaultLayout>
     );
-  };
-
-  render() {
-    const { user } = this.props;
-    if (user.token) {
-      return this.getPrivateRoutes();
-    }
-    return <Switch>{this.getPublicRoutes()}</Switch>;
   }
 }
 export default connect(
-  state => ({
-    user: state.user
+  (state) => ({
+    token: state.user.token,
   }),
   {}
 )(App);

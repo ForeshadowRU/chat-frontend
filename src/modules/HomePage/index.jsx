@@ -1,15 +1,22 @@
 import React, { Component } from "react";
+import Channels from "./Sidebar/Channels";
 import "./index.sass";
-import ChatList from "./ChatList";
-import MessageContainer from "./MessageContainer";
-
+import PrivateMessages from "./Sidebar/PrivateMessages";
+import Chat from "./Chat";
 class HomePage extends Component {
   render() {
     return (
-      <div className="homepage">
-        <ChatList />
-        <MessageContainer />
-      </div>
+      <main className="homepage">
+        <aside className="homepage-sidebar">
+          <div>
+            <Channels />
+          </div>
+          <div>
+            <PrivateMessages />
+          </div>
+        </aside>
+        <Chat />
+      </main>
     );
   }
 }

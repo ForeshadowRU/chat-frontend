@@ -1,15 +1,18 @@
-import { LOGIN } from "./actionTypes";
+import { LOGIN, LOGOUT } from "./actionTypes";
 
 const initialState = {
   token: localStorage.getItem("auth_token"),
-  user: null
 };
 
 const UserHandler = {
   [LOGIN]: (state, { payload }) => ({
     ...state,
-    ...payload
-  })
+    ...payload,
+    token: payload.token ? payload.token : state.token,
+  }),
+  [LOGOUT]: (state, { payload }) => ({
+    token: null,
+  }),
 };
 
 export default (state = initialState, action) =>

@@ -11,17 +11,14 @@ class LoginModule extends Component {
     return (
       <Formik
         initialValues={{ username: "", password: "" }}
-        onSubmit={(values, actions) => {
-          const { login } = this.props;
-          login(values);
-        }}
+        onSubmit={() => undefined}
       >
-        {props => <LoginForm {...props} />}
+        {(props) => <LoginForm {...props} {...this.props} />}
       </Formik>
     );
   }
 }
 
 export default connect(null, {
-  login
+  login,
 })(LoginModule);
