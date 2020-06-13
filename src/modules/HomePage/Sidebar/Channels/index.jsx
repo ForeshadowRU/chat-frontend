@@ -2,16 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import Channel from "./Channel";
 import Spoiler from "ui/Spoiler";
-import { useEffect } from "react";
 import { getChannels } from "redux/channels/actions";
 
 function Channels(props) {
-  const { values, getChannels } = props;
-  useEffect(() => {
-    if (!values.length) {
-      getChannels();
-    }
-  });
+  const { values } = props;
+
   if (!values.length) return null;
   return (
     <Spoiler title="Channels">

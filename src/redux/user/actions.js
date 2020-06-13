@@ -14,7 +14,6 @@ export const me = () => async (dispatch, getStore) => {
   }
 };
 export const login = (googleToken) => async (dispatch, getStore) => {
-  console.log(googleToken);
   try {
     const response = await axios.get("google", {
       headers: { Authorization: googleToken },

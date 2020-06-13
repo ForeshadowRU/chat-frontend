@@ -10,11 +10,12 @@ import LogoutItem from "../DropdownMenu/LogoutItem";
 import { useEffect } from "react";
 import { connect } from "react-redux";
 import { me } from "redux/user/actions";
-function NavBar({ user, me }) {
+import { getChannelMessages, getChannels } from "redux/channels/actions";
+function NavBar({ user, me, getChannelMessages, getChannels }) {
   useEffect(() => {
     console.log(user);
     if (!user.data) {
-      me();
+      me().then(() => getChannels().then(() => getChannelMessages()));
     }
   });
   return (
@@ -38,4 +39,8 @@ function NavBar({ user, me }) {
   );
 }
 
-export default connect((state) => ({ user: state.user }), { me: me })(NavBar);
+export default connect((state) => ({ user: state.user }), {
+  me: me,
+  getChannelMessages: getChannelMessages,
+  getChannels: getChannels,
+})(NavBar);

@@ -15,7 +15,9 @@ function Channel(props) {
     </li>
   );
 }
-
-export default connect(() => {}, {
+const mapStateToProps = () => {
+  return {};
+};
+export default connect(mapStateToProps, {
   getChannelMessages,
 })(Channel);

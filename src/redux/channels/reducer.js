@@ -1,14 +1,8 @@
 import { SET_CHANNELS, SET_ACTIVE } from "./actionTypes";
 
-const values = [];
-// Array.apply(null, new Array(10)).map((channel, id) => ({
-//   name: faker.random.word(),
-//   id,
-// }));
-
 const initialState = {
-  values: values,
-  active: values[Math.floor(Math.random() * values.length)],
+  values: [],
+  active: null,
 };
 
 const ChannelsHandler = {

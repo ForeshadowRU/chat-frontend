@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import "./index.sass";
 import _public from "routes/public";
 import { initSocket } from "webscokets";
+
 class App extends React.Component {
   render() {
     const { token } = this.props;
