@@ -10,7 +10,7 @@ export const me = () => async (dispatch, getStore) => {
     const response = await axios.get("me");
     dispatch(setLoginData({ data: response.data }));
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 };
 export const login = (googleToken) => async (dispatch, getStore) => {
@@ -22,7 +22,7 @@ export const login = (googleToken) => async (dispatch, getStore) => {
     localStorage.setItem("auth_token", data.auth_token);
     dispatch(setLoginData({ token: data.auth_token, data: data.user }));
   } catch (e) {
-    console.log(e.message);
+    console.error(e.message);
   }
 };
 

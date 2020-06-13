@@ -5,7 +5,6 @@ import Spoiler from "ui/Spoiler";
 
 function PrivateMessages(props) {
   const { values } = props;
-  console.log(props.values);
   return (
     <Spoiler title="Private Messages">
       <ul className="homepage-pms">
