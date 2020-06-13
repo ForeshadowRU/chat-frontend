@@ -9,7 +9,7 @@ export const setChannels = (channels) => ({
 export const setActive = (active) => async (dispatch, getStore) => {
   let channel = active;
   if (!active) {
-    let id = getStore().user.last_used_channel;
+    let id = getStore().user.data.last_used_channel;
     channel = getStore().channels.values.find((el) => el.id === id);
   }
   dispatch({

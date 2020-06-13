@@ -51,7 +51,14 @@
                 content: ""
                 display: block
                 background-color: #494A4E
-        &-message
+        &-message   
+            &-services
+                display: flex
+                flex-direction: row-reverse                
+            &-icon
+                svg               
+                    width: 20px
+                    height: 20px        
             &-profile
                 display: flex
                 flex-direction: column
@@ -59,7 +66,7 @@
                 min-width: 100px
                 min-height: 117px
                 &-image
-                    img
+                    img                      
                         border-radius: 50%
                         padding: 10px
                 &-fullname
@@ -68,13 +75,7 @@
                         font-size: 18px
                         color: #3EAA89
                         margin: 0
-                        padding: 0
-            &-icon
-                display: flex
-                flex-direction: row-reverse
-
-
-
+                        padding: 0                         
             &-container
                 max-width: 1500px
                 width: 100%
@@ -92,6 +93,7 @@
                 padding: 10px 10px 10px 20px
                 &:hover
                     background-color: #dcdcdc
+              
             &-text
                 font-size: 18px
                 margin: 0

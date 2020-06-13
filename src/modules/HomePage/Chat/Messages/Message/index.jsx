@@ -1,9 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import { SvgFactory } from "assets/SvgFactory";
+import { Popconfirm } from "antd";
+import { deleteMessage } from "redux/messages/actions";
 
 function Message(props) {
-  const { sender, text } = props;
+  const { id, sender, text, created_at, deleteMessage } = props;
+  console.log(props);
   const { avatar, firstname } = sender;
 
   return (
@@ -17,16 +20,32 @@ function Message(props) {
         </div>
       </div>
       <div className="homepage-chat-message-wrapper">
-        <span className="homepage-chat-message-icon">{SvgFactory.edit()}</span>
+        <div className="homepage-chat-message-services">
+          <span className="homepage-chat-message-icon">
+            {SvgFactory.edit()}
+          </span>
+          <Popconfirm
+            title="Are you sure？"
+            okText="Yes"
+            cancelText="No"
+            onConfirm={() => deleteMessage({ id })}
+          >
+            <span className="homepage-chat-message-icon">
+              {SvgFactory.trash()}
+            </span>
+          </Popconfirm>
+        </div>
         <p
           className="homepage-chat-message-text"
           dangerouslySetInnerHTML={{ __html: text }}
         ></p>
-        <span className="homepage-chat-message-date">21.04.2020</span>
+        <span className="homepage-chat-message-date">
+          {new Date(created_at).toLocaleDateString("ru")}
+        </span>
       </div>
       <div className="homepage-chat-message-profile"></div>
     </div>
   );
 }
 
-export default connect((state) => ({ ...state.user.data }), {})(Message);
+export default connect((state) => ({}), { deleteMessage })(Message);

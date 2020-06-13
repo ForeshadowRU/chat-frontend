@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import { DefaultLayout } from "layouts/DefaultLayout";
 import privateRoutes from "routes/private";
 import { connect } from "react-redux";
+import "antd/dist/antd.css";
 import "./index.sass";
 import _public from "routes/public";
 import { initSocket } from "webscokets";
