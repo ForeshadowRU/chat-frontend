@@ -20,10 +20,16 @@ export const deleteMessage = (options) => async (dispatch, getStore) => {
   }
 };
 
-export const sendMessage = (options) => async (dispatch, getStore) => {
-  console.log(options.message.text);
+export const sendMessage = (text) => async (dispatch, getStore) => {
+  // if (!text.replace(/<(.|\n)*?>/g, "").trim().length) {
+  //   return;
+  // }
+  console.log(text, {
+    text: text,
+    channelId: getStore().channels.active.id,
+  });
   socket.emit("message", {
-    text: options.message.text,
+    text: text,
     channelId: getStore().channels.active.id,
   });
 };

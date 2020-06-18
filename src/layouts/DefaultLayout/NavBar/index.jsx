@@ -17,11 +17,11 @@ import {
 } from "redux/channels/actions";
 function NavBar({ user, me, getChannelMessages, getChannels, setActive }) {
   useEffect(() => {
+    console.log(user);
     if (!user.data) {
-      me().then(() =>
-        getChannels().then(() => getChannelMessages().then(setActive()))
-      );
+      me();
     }
+    getChannels().then(() => getChannelMessages().then(setActive()));
   });
   return (
     <nav className="navbar">

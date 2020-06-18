@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import NavBar from "./NavBar";
 import "./index.sass";
 export const DefaultLayout = (props) => {

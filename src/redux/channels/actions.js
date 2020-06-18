@@ -9,6 +9,7 @@ export const setChannels = (channels) => ({
 export const setActive = (active) => async (dispatch, getStore) => {
   let channel = active;
   if (!active) {
+    if (!getStore.user) return;
     let id = getStore().user.data.last_used_channel;
     channel = getStore().channels.values.find((el) => el.id === id);
   }
@@ -36,6 +37,15 @@ export const getChannelMessages = (options = {}) => async (
 
     dispatch(setActive(options.active));
     dispatch(setMessages(response.data));
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+export const createChannel = (name) => async (dispatch, getStore) => {
+  try {
+    const response = await axios.post("/channels", { name });
+    dispatch(setChannels(response.data));
   } catch (e) {
     console.error(e);
   }
