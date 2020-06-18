@@ -8,9 +8,9 @@ export const setMessages = (messages) => ({
   payload: messages,
 });
 
-export const deleteMessage = (options) => async (dispatch, getStore) => {
+export const deleteMessage = (id) => async (dispatch, getStore) => {
   try {
-    const response = await axios.delete(`messages/${options.id}`);
+    const response = await axios.delete(`messages/${id}`);
 
     message.success("Message has been removed");
 
@@ -21,13 +21,6 @@ export const deleteMessage = (options) => async (dispatch, getStore) => {
 };
 
 export const sendMessage = (text) => async (dispatch, getStore) => {
-  // if (!text.replace(/<(.|\n)*?>/g, "").trim().length) {
-  //   return;
-  // }
-  console.log(text, {
-    text: text,
-    channelId: getStore().channels.active.id,
-  });
   socket.emit("message", {
     text: text,
     channelId: getStore().channels.active.id,

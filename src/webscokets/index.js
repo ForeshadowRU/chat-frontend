@@ -9,7 +9,7 @@ export const initSocket = (token) => {
       transports: ["websocket"],
     });
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
   socket.on("message", (message) => {
     if (message.channel.id === store.getState().channels.active.id) {
