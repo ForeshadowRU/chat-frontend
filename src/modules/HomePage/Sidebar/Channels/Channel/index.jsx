@@ -11,7 +11,7 @@ function Channel(props) {
         getChannelMessages({ id: rest.id, active: rest });
       }}
     >
-      #{rest.name}
+      {rest.active ? <u>#{rest.name}</u> : <span> #{rest.name}</span>}
     </li>
   );
 }

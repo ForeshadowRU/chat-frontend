@@ -12,7 +12,7 @@ function Message(props) {
       <span key="comment-basic-dislike">
         <Popconfirm
           onConfirm={() => deleteMessage(id)}
-          title="Are you sure delete this task?"
+          title="Are you sure delete this message?"
         >
           {React.createElement(DeleteOutlined, {})}
         </Popconfirm>

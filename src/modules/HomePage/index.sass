@@ -50,7 +50,7 @@
         background: #F9F9F9
         &-container
             display: flex
-            align-items: start
+            align-items: flex-start
             justify-content: left
             flex-direction: column
             height: 100%
@@ -132,9 +132,11 @@
         justify-content: center
         padding: 5px
         cursor: pointer
+        &:active
+            text-decoration: underline
         &:hover
             color: #000000
-            background-color: $--channels-bg-hover
+            background-color: #c9c9c9
     &-pm
         @extend .homepage-channel
       

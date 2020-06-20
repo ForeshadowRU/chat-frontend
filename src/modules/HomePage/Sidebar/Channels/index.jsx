@@ -3,13 +3,11 @@ import { connect } from "react-redux";
 import Channel from "./Channel";
 import { getChannels, createChannel } from "redux/channels/actions";
 import { Modal, Input, Collapse, Button, message } from "antd";
-import { sendMessage } from "redux/messages/actions";
 const Panel = Collapse.Panel;
 function Channels(props) {
-  const { values, createChannel } = props;
+  const { values, createChannel, active } = props;
   const [showModal, isShowingModal] = useState(false);
   const [name, setName] = useState("");
-
   const sendRequest = () => {
     if (name.length > 3) {
       isShowingModal(false);
@@ -40,7 +38,11 @@ function Channels(props) {
         >
           <ul className="homepage-channels">
             {values.map((channel, idx) => (
-              <Channel {...channel} key={idx} />
+              <Channel
+                {...channel}
+                key={idx}
+                active={channel.id === active.id}
+              />
             ))}
           </ul>
         </Panel>
@@ -48,7 +50,7 @@ function Channels(props) {
       <Modal
         title="Create New Channel"
         visible={showModal}
-        onOk={sendMessage}
+        onOk={sendRequest}
         okButtonProps={{ disabled: !name.length }}
         onCancel={() => {
           isShowingModal(false);
