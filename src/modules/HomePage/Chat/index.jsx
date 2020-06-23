@@ -8,7 +8,7 @@ function Chat(props) {
   return (
     <>
       <section className="homepage-chat">
-        <Messages name={active ? active.name : "nichego"} messages={messages} />
+        <Messages name={active ? active.name : "Unknown"} messages={messages} />
       </section>
       <section className="homepage-quill">
         <Quill />

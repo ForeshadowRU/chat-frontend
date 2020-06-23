@@ -11,6 +11,19 @@
 .ql-container.ql-snow
     height: 130px
 
+.ant-comment-content-author-name
+    font-size: 18px !important
+.ant-comment 
+    width: 100%;
+    position: relative;
+    background-color: inherit;
+    margin-left: 15px
+    &:hover
+        background-color: #dfdfdf
+.ant-collapse-content-box
+    padding: 0 !important
+
+
 .homepage
     margin: 0
     padding: 0
@@ -36,21 +49,15 @@
         left: 17%
         top: $--nav-size
         background: #F9F9F9
-        &-channelname
-            color: #000000
-            display: block
-            margin-top: 53px
-            margin-left: 10%
-            margin-bottom: 30px
-            &::before
-                content: "# "
-            &::after
-                height: 1px
-                max-width: 1185px
-                width: 83%
-                content: ""
-                display: block
-                background-color: #494A4E
+        &-container
+            display: flex
+            align-items: flex-start
+            justify-content: left
+            flex-direction: column
+            height: 100%
+            width: 100%            
+        &-title
+            border-bottom: 1px solid #d9d9d9;                       
         &-message   
             &-services
                 display: flex
@@ -126,11 +133,14 @@
         justify-content: center
         padding: 5px
         cursor: pointer
+        &:active
+            text-decoration: underline
         &:hover
             color: #000000
-            background-color: $--channels-bg-hover
+            background-color: #c9c9c9
     &-pm
         @extend .homepage-channel
+        margin: 0
       
 
 

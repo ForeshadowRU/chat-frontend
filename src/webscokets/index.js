@@ -1,6 +1,7 @@
 import io from "socket.io-client";
 import { store } from "../redux";
 import { appendMessage } from "redux/messages/actions";
+import { message } from "antd";
 export let socket = null;
 
 export const initSocket = (token) => {
@@ -9,11 +10,15 @@ export const initSocket = (token) => {
       transports: ["websocket"],
     });
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
   socket.on("message", (message) => {
     if (message.channel.id === store.getState().channels.active.id) {
-      store.dispatch(appendMessage(message));
+      store.dispatch(appendMessage({ ...message, editable: true }));
     }
+  });
+
+  socket.on("users", (msg) => {
+    console.log(msg);
   });
 };
