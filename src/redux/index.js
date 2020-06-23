@@ -6,7 +6,7 @@ import thunk from "redux-thunk";
 
 import user from "./user/reducer";
 import channels from "./channels/reducer";
-import pms from "./pms/reducer";
+import pms from "./members/reducer";
 import messages from "./messages/reducer";
 
 const logger = createLogger({

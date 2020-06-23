@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Channels from "./Sidebar/Channels";
+import Members from "./Sidebar/Members";
 import "./index.sass";
 
 import Chat from "./Chat";
@@ -8,9 +9,8 @@ class HomePage extends Component {
     return (
       <main className="homepage">
         <aside className="homepage-sidebar ant-collapse">
-          <div>
-            <Channels />
-          </div>
+          <Channels />
+          <Members />
         </aside>
         <Chat />
       </main>
