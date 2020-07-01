@@ -17,7 +17,6 @@ function Channels(props) {
     message.error("Channel name must me more than 3 symbols");
   };
 
-  if (!values.length) return null;
   return (
     <>
       <Collapse defaultActiveKey="1">

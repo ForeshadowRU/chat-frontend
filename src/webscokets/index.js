@@ -1,7 +1,6 @@
 import io from "socket.io-client";
 import { store } from "../redux";
 import { appendMessage } from "redux/messages/actions";
-import { message } from "antd";
 export let socket = null;
 
 export const initSocket = (token) => {
