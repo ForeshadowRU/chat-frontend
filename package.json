@@ -1,52 +1,24 @@
 {
-  "name": "chat-front",
-  "version": "0.1.0",
+  "name": "chat-frontend",
+  "version": "1.1.0",
   "private": true,
-  "dependencies": {
-    "@ant-design/icons": "^4.2.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "antd": "^4.3.3",
-    "axios": "^0.19.2",
-    "faker": "^4.1.0",
-    "formik": "^2.1.4",
-    "moment": "^2.26.0",
-    "node-sass": "^4.13.1",
-    "quill-html-edit-button": "^1.0.15",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-google-login": "^5.1.2",
-    "react-grid-layout": "^0.18.2",
-    "react-quill": "^2.0.0-beta.2",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.1",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "socket.io-client": "^2.3.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.1.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0"
   }
 }
