@@ -1,6 +1,7 @@
 import { Text, Paper, Group, PaperProps, Alert } from '@mantine/core';
 import { GoogleButton } from '../ui/GoggleButton';
 
+
 export function AuthView(props: PaperProps) {
   return (
     <Paper radius="md" p="xl" withBorder {...props} w="50%" pos="absolute" top="25%" left="25%">

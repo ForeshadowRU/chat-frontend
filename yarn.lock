@@ -3141,6 +3141,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-oauth/google@npm:^0.12.1":
+  version: 0.12.1
+  resolution: "@react-oauth/google@npm:0.12.1"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: fe23e3c0a4d0b9999fcd7b932b1a42bf94fdab526473931d780d08742455b8861fc647857b3b491e258ecef4a407dbf7321440c0d00890e23059d487795f92fb
+  languageName: node
+  linkType: hard
+
 "@sinclair/typebox@npm:^0.27.8":
   version: 0.27.8
   resolution: "@sinclair/typebox@npm:0.27.8"
@@ -4603,6 +4613,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cookie@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@types/cookie@npm:0.6.0"
+  checksum: 5b326bd0188120fb32c0be086b141b1481fec9941b76ad537f9110e10d61ee2636beac145463319c71e4be67a17e85b81ca9e13ceb6e3bb63b93d16824d6c149
+  languageName: node
+  linkType: hard
+
 "@types/cross-spawn@npm:^6.0.2":
   version: 6.0.3
   resolution: "@types/cross-spawn@npm:6.0.3"
@@ -4868,6 +4885,13 @@ __metadata:
   version: 20.7.0
   resolution: "@types/node@npm:20.7.0"
   checksum: 935c8a30e3dbb9d10151316522571c7dacd8277a66db821a0581a9ff18c23d780c3e155437b72399b70a081616bcd87c3d745565527df721acf2a0577ccf906c
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^16.10.2":
+  version: 16.18.80
+  resolution: "@types/node@npm:16.18.80"
+  checksum: 6566ab74519adfdccfdb254974bd641f62b0aa1469fe8e3196535aeb01947b0906fc3288ed8ed3571f65f945042f588562d4a0f4a8c732d2bab9a86d28749536
   languageName: node
   linkType: hard
 
@@ -5975,6 +5999,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^1.6.7":
+  version: 1.6.7
+  resolution: "axios@npm:1.6.7"
+  dependencies:
+    follow-redirects: "npm:^1.15.4"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 131bf8e62eee48ca4bd84e6101f211961bf6a21a33b95e5dfb3983d5a2fe50d9fffde0b57668d7ce6f65063d3dc10f2212cbcb554f75cfca99da1c73b210358d
+  languageName: node
+  linkType: hard
+
 "axobject-query@npm:^3.2.1":
   version: 3.2.1
   resolution: "axobject-query@npm:3.2.1"
@@ -7015,6 +7050,24 @@ __metadata:
   version: 0.5.0
   resolution: "cookie@npm:0.5.0"
   checksum: c01ca3ef8d7b8187bae434434582288681273b5a9ed27521d4d7f9f7928fe0c920df0decd9f9d3bbd2d14ac432b8c8cf42b98b3bdd5bfe0e6edddeebebe8b61d
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "cookie@npm:0.6.0"
+  checksum: f2318b31af7a31b4ddb4a678d024514df5e705f9be5909a192d7f116cfb6d45cbacf96a473fa733faa95050e7cff26e7832bb3ef94751592f1387b71c8956686
+  languageName: node
+  linkType: hard
+
+"cookies-next@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "cookies-next@npm:4.1.1"
+  dependencies:
+    "@types/cookie": "npm:^0.6.0"
+    "@types/node": "npm:^16.10.2"
+    cookie: "npm:^0.6.0"
+  checksum: 6848fdbe2f29ee94194d323a0c7e8d71dddd0628bf2d26da2382854e43f05cae47acea8795cc12f3fbe7e4e679d30c362c6276e3ea0dcf2bf906ebc6f68bbb3b
   languageName: node
   linkType: hard
 
@@ -8925,6 +8978,16 @@ __metadata:
   version: 0.217.0
   resolution: "flow-parser@npm:0.217.0"
   checksum: 54658709add8028896b377548d6ec9ae6423ba8edb94ccbd9b81a54a0d5d2b893e453007bc7ea83da375833b216b9e5b89394274088a7644b2b2edc5816233bd
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.15.4":
+  version: 1.15.5
+  resolution: "follow-redirects@npm:1.15.5"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 418d71688ceaf109dfd6f85f747a0c75de30afe43a294caa211def77f02ef19865b547dfb73fde82b751e1cc507c06c754120b848fe5a7400b0a669766df7615
   languageName: node
   linkType: hard
 
@@ -11434,6 +11497,7 @@ __metadata:
     "@mantine/modals": "npm:^7.5.2"
     "@next/bundle-analyzer": "npm:^14.0.1"
     "@next/eslint-plugin-next": "npm:^14.0.1"
+    "@react-oauth/google": "npm:^0.12.1"
     "@storybook/addon-essentials": "npm:^7.5.2"
     "@storybook/addon-styling-webpack": "npm:^0.0.5"
     "@storybook/blocks": "npm:^7.5.2"
@@ -11449,7 +11513,9 @@ __metadata:
     "@types/react": "npm:18.2.34"
     "@typescript-eslint/eslint-plugin": "npm:^6.9.1"
     "@typescript-eslint/parser": "npm:^6.9.1"
+    axios: "npm:^1.6.7"
     babel-loader: "npm:^9.1.3"
+    cookies-next: "npm:^4.1.1"
     dayjs: "npm:^1.11.10"
     eslint: "npm:^8.53.0"
     eslint-config-airbnb: "npm:19.0.4"
@@ -13046,7 +13112,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"proxy-from-env@npm:^1.0.0":
+"proxy-from-env@npm:^1.0.0, proxy-from-env@npm:^1.1.0":
   version: 1.1.0
   resolution: "proxy-from-env@npm:1.1.0"
   checksum: fe7dd8b1bdbbbea18d1459107729c3e4a2243ca870d26d34c2c1bcd3e4425b7bcc5112362df2d93cc7fb9746f6142b5e272fd1cc5c86ddf8580175186f6ad42b

@@ -18,7 +18,8 @@
     "paths": {
       "@/*": ["./*"],
       "@shared": ["./src/shared/*"],
-      "@features": ["./src/features/*"]
+      "@features": ["./src/features/*"],
+      "@config": ["./src/config/*"]
     },
     "plugins": [{ "name": "next" }]
   },
